@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AnxietyTracker</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="button1">Log a Snapshot</string>
+    <string name="button2">Journal</string>
+    <string name="button3">Meditation Guide</string>
+    <string name="button4">Visualizations</string>
+</resources>

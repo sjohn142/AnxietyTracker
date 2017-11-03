@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="csci412.wwu.edu.anxietytracker.MainActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/colorBckgrnd">
+
+    <TextView
+        android:id="@+id/mainmenutext"
+        android:layout_width="752dp"
+        android:layout_height="100dp"
+        android:text="@string/main_menu"
+        android:gravity="center_horizontal"
+        android:textSize="60dp"
+        android:textColor="@color/white"
+        android:fontFamily="DancingScript-Regular"
+        app:layout_constraintBottom_toTopOf="@+id/topthird"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dip"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/topquarter"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+
+    <View
+        android:id="@+id/brk0"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button1"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:text="@string/button1"
+        android:gravity="center"
+        android:background="@color/colorBckgrnd"
+        app:layout_constraintTop_toBottomOf="@+id/top4"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+        <!--android:onClick="modifyData" -->
+
+    <View
+        android:id="@+id/brk1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="@string/button2"
+        android:textSize="20dp"
+        android:background="@color/colorBckgrnd"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/brk1"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+    <!--android:onClick="modifyData" -->
+
+    <View
+        android:id="@+id/brk2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/button2"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:text="@string/button3"
+        android:gravity="center"
+        android:background="@color/colorBckgrnd"
+        app:layout_constraintTop_toBottomOf="@+id/brk2"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+    <!--android:onClick="modifyData" -->
+
+    <View
+        android:id="@+id/brk3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/button3"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:text="@string/button4"
+        android:gravity="center"
+        android:background="@color/colorBckgrnd"
+        app:layout_constraintTop_toBottomOf="@+id/brk3"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"/>
+    <!--android:onClick="modifyData" -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/button4"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topthird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"
+        tools:layout_editor_absoluteY="266dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topquarter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31"
+        tools:layout_editor_absoluteY="266dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"
+        tools:layout_editor_absoluteY="266dp"
+        tools:layout_editor_absoluteX="0dp" />
+</android.support.constraint.ConstraintLayout>
