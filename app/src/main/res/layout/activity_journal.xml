@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="csci412.wwu.edu.anxietytracker.JournalActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="25dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/journal_intro"/>
+    <!--        android:fontFamily="@font/thin-design.regular"-->
+
+    <SeekBar
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:progress="50"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rate_mood"
+        android:padding="15dp"/>
+
+    <EditText
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"
+        android:text="@string/explain_mood"/>
+
+</LinearLayout>

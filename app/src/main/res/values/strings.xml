@@ -5,4 +5,12 @@
     <string name="button2">Journal</string>
     <string name="button3">Meditation Guide</string>
     <string name="button4">Visualizations</string>
+    <string name="title_activity_log_asnapshot">Log A SnapShot</string>
+    <string name="log">Log A Snapshot</string>
+    <string name="change">Change Location</string>
+    <string name="mood">Enter a Mood</string>
+    <string name="time">Enter a Time</string>
+    <string name="journal_intro">How are you feeling?</string>
+    <string name="rate_mood">Rate your mood on a scale from 1-10</string>
+    <string name="explain_mood">Explain your mood. What are you thinking?</string>
 </resources>

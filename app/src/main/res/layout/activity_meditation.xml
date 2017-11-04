@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="csci412.wwu.edu.anxietytracker.MeditationActivity">
+
+    <TextView
+        android:id="@+id/titleMedGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Meditation Guide"
+        android:textSize="30dp"
+        android:textColor="@color/colorAccent"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="75dp"
+        android:layout_below="@id/titleMedGuide"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:text="Breathing Guide"
+            android:textSize="20dp"
+            android:background="@color/colorAccent"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:text="Calming Music"
+            android:textSize="20dp"
+            android:background="@color/colorPrimary"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:text="Support"
+            android:textSize="20dp"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="csci412.wwu.edu.anxietytracker.LogASnapshotActivity" />
+
+<Button
+    android:id="@+id/button1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#b4929e"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:padding="8dp"
+    android:layout_margin="5dp"
+    android:text="@string/log"
+    android:textColor="#ffffff" />
+
+<Button
+    android:id="@+id/button2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#b4929e"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:padding="8dp"
+    android:layout_margin="5dp"
+    android:text="@string/change"
+    android:textColor="#ffffff" />
+
+<EditText
+    android:id="@+id/simpleEditText"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/mood"
+    android:textColor="#ffffff"
+    android:background="#b4929e"
+    android:visibility="visible"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+<EditText
+    android:id="@+id/simpleEditText2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/time"
+    android:textColor="#ffffff"
+    android:background="#b4929e"
+    android:visibility="visible"
+    android:layout_marginTop="50dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
