@@ -28,6 +28,8 @@
             android:name=".JournalActivity"></activity>
         <activity
             android:name=".MeditationActivity"></activity>
+        <activity
+            android:name=".VisualizationsActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.content.Intent;
+import android.util.Log;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
     private static int TIMEOUT = 4000;
@@ -21,4 +23,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }, TIMEOUT);
     }
+
 }
