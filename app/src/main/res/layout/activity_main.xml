@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/splashimg"
-        android:layout_height="580dp"
-        android:layout_width="385dp"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
         android:src="@drawable/calm"
         android:visibility="visible"
         android:scaleType="fitXY"/>
