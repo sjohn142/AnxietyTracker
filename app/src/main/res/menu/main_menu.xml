@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="csci412.wwu.edu.csci412_assignment3.MainActivity">
+    <item
+        android:id="@+id/action_log"
+        android:orderInCategory="100"
+        android:title="@string/button1"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_jour"
+        android:orderInCategory="100"
+        android:title="@string/button2"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_med"
+        android:orderInCategory="100"
+        android:title="@string/button3"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_vis"
+        android:orderInCategory="100"
+        android:title="@string/button4"
+        app:showAsAction="never"/>
+</menu>

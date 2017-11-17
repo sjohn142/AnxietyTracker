@@ -49,4 +49,10 @@ public class MainMenu extends AppCompatActivity {
         this.startActivity(myIntent);
         //overridePendingTransition(R.anim.diagonal_out,R.anim.diagonal_in);
     }
+
+    public void startVis(View v) {
+        Intent myIntent = new Intent(this, VisualizationsActivity.class);
+        this.startActivity(myIntent);
+        //overridePendingTransition(R.anim.diagonal_out,R.anim.diagonal_in);
+    }
 }

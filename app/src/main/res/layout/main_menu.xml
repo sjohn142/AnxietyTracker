@@ -114,8 +114,8 @@
         android:background="@color/colorBckgrnd"
         app:layout_constraintTop_toBottomOf="@+id/brk3"
         app:layout_constraintLeft_toLeftOf="@+id/left"
-        app:layout_constraintRight_toRightOf="@+id/right"/>
-    <!--android:onClick="modifyData" -->
+        app:layout_constraintRight_toRightOf="@+id/right"
+        android:onClick="startVis"/>
 
     <View
         android:layout_width="fill_parent"
