@@ -44,7 +44,7 @@ public class Journal {
         return date;
     }
 
-    String getJournalEntry(){
+    String getJournalEntry() {
         return journalEntry;
     }
 
