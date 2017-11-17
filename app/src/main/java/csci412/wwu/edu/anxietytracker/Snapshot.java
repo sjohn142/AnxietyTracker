@@ -6,12 +6,12 @@ package csci412.wwu.edu.anxietytracker;
 
 public class Snapshot {
 
-    private float lat;
-    private float longi;
+    private double lat;
+    private double longi;
     private int id;
     private int mood;
 
-    public Snapshot(int id, float lat, float longi,int mood) {
+    public Snapshot(int id, double lat, double longi,int mood) {
         setId(id);
         setLat(lat);
         setLong(longi);
@@ -22,11 +22,11 @@ public class Snapshot {
         id = newId;
     }
 
-    public void setLat(float newLat) {
+    public void setLat(double newLat) {
         lat = newLat;
     }
 
-    public void setLong(float newLong) {
+    public void setLong(double newLong) {
         longi = newLong;
     }
 
@@ -38,17 +38,16 @@ public class Snapshot {
         return id;
     }
 
-    public float getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public float getLongi() {
+    public double getLongi() {
         return longi;
     }
 
     public int getMood() {
         return mood;
     }
-
 
 }

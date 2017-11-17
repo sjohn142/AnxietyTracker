@@ -69,9 +69,13 @@ public class JournalActivity extends AppCompatActivity {
         Journal tjournal = new Journal(0, date, entry, mood);
         Log.w("MainActivity", "journal = " + tjournal.toString());
         dbManager.insert(tjournal);
-
         //clear info?
+    }
 
+    public void viewEntries(View v) {
+        Intent viewJournals = new Intent(this, ViewJournalActivity.class);
+        this.startActivity(viewJournals);
+        finish();
     }
 
     public void goBack(View v) { this.finish();}
