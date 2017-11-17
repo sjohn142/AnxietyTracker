@@ -36,19 +36,19 @@ public class Journal {
         journalEntry = curJournal;
     }
 
-    int getId() {
+    public int getId() {
         return id;
     }
 
-    String getDate() {
+    public String getDate() {
         return date;
     }
 
-    String getJournalEntry() {
+    public String getJournalEntry() {
         return journalEntry;
     }
 
-    int getMoodLevel() {
+    public int getMoodLevel() {
         return moodLevel;
     }
 

@@ -1,22 +1,30 @@
 package csci412.wwu.edu.anxietytracker;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class LogASnapshotActivity extends AppCompatActivity implements OnMapReadyCallback {
-
+    private SnapshotDatabaseManager dbManager;
     private GoogleMap mMap;
 
     @Override
@@ -77,9 +85,45 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        LocationManager locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        boolean network_enabled = locManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        Location location;
+        double longitude = 0.0;
+        double latitude = 0.0;
+
+        if (network_enabled) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
+            location = locManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            if(location!=null){
+                longitude = location.getLongitude();
+                latitude = location.getLatitude();
+            }
+        }
+
+        CameraPosition cameraPosition = new CameraPosition.Builder()
+                .target(new LatLng(latitude, longitude))      // Sets the center of the map to location user
+                .zoom(15)                   // Sets the zoom
+                .build();                   // Creates a CameraPosition from the builder
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng currloc = new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(currloc).title("Current Location"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currloc, 20));
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
+
+    // I don't know if this should accept an ID??
+    //Snapshot snap = new Snapshot(0, latitude, longitude, 0);
+    //Log.w("MainActivity", "journal = " + tjournal.toString()); ??
+    //dbManager.insert(snap);
+    //Toast.makeText(this, "Added snapshot at " + latitude + ", " + longitude, Toast.LENGTH_SHORT).show();
 }
