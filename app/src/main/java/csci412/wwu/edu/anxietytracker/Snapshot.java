@@ -8,19 +8,19 @@ public class Snapshot {
 
     private double lat;
     private double longi;
+    private String date;
     private int id;
     private int mood;
 
-    public Snapshot(int id, double lat, double longi,int mood) {
+    public Snapshot(int id, double lat, double longi,int mood, String date) {
         setId(id);
         setLat(lat);
         setLong(longi);
         setMood(mood);
+        setDate(date);
     }
 
-    public void setId(int newId) {
-        id = newId;
-    }
+    public void setId(int newId) { id = newId; }
 
     public void setLat(double newLat) {
         lat = newLat;
@@ -33,6 +33,8 @@ public class Snapshot {
     public void setMood(int newMood) {
         mood = newMood;
     }
+
+    public void setDate(String newDate) {date = newDate;}
 
     public int getId() {
         return id;
@@ -49,5 +51,7 @@ public class Snapshot {
     public int getMood() {
         return mood;
     }
+
+    public String getDate() {return date;}
 
 }
