@@ -7,9 +7,9 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -25,15 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainMenu"></activity>
-        <activity
-            android:name=".JournalActivity"></activity>
-        <activity
-            android:name=".MeditationActivity"></activity>
-        <activity
-            android:name=".VisualizationsActivity"></activity>
-        <activity
-            android:name=".ViewJournalActivity"></activity>
+        <activity android:name=".MainMenu" />
+        <activity android:name=".JournalActivity" />
+        <activity android:name=".MeditationActivity" />
+        <activity android:name=".VisualizationsActivity" />
+        <activity android:name=".ViewJournalActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -48,7 +44,43 @@
 
         <activity
             android:name=".LogASnapshotActivity"
-            android:label="@string/title_activity_log_asnapshot"></activity>
+            android:label="@string/title_activity_log_asnapshot" />
+        <activity
+            android:name=".support"
+            android:label="@string/title_activity_support"
+            android:parentActivityName=".MeditationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="csci412.wwu.edu.anxietytracker.MeditationActivity" />
+        </activity>
+        <activity
+            android:name=".BBreathing"
+            android:label="@string/title_activity_bbreathing"
+            android:parentActivityName=".MeditationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="csci412.wwu.edu.anxietytracker.MeditationActivity" />
+        </activity>
+        <activity
+            android:name=".MBreathing"
+            android:label="@string/title_activity_mbreathing"
+            android:parentActivityName=".MeditationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="csci412.wwu.edu.anxietytracker.MeditationActivity" />
+        </activity>
+        <activity
+            android:name=".TBreathing"
+            android:label="@string/title_activity_tbreathing"
+            android:parentActivityName=".MeditationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="csci412.wwu.edu.anxietytracker.MeditationActivity" />
+        </activity>
     </application>
 
 </manifest>

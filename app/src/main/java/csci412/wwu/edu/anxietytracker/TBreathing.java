@@ -2,18 +2,25 @@ package csci412.wwu.edu.anxietytracker;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+/*
+Created by ES on 11/20/2017
+ */
 
-public class MeditationActivity extends AppCompatActivity {
+public class TBreathing extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meditation);
+        setContentView(R.layout.activity_tbreathing);
+
 
     }
 
@@ -22,7 +29,6 @@ public class MeditationActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -51,31 +57,6 @@ public class MeditationActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-
-    public void updateView() {
-    }
-
-    public void viewSupport(View v) {
-        Intent myIntent = new Intent(this, support.class);
-        this.startActivity(myIntent);
-        //overridePendingTransition(R.anim.diagonal_out,R.anim.diagonal_in);
-    }
-    public void viewBelly(View v) {
-        Intent myIntent = new Intent(this, BBreathing.class);
-        this.startActivity(myIntent);
-        //overridePendingTransition(R.anim.diagonal_out,R.anim.diagonal_in);
-    }
-    public void viewMindful(View v) {
-        Intent myIntent = new Intent(this, MBreathing.class);
-        this.startActivity(myIntent);
-        //overridePendingTransition(R.anim.diagonal_out,R.anim.diagonal_in);
-    }
-    public void viewTension(View v) {
-        Intent myIntent = new Intent(this, TBreathing.class);
-        this.startActivity(myIntent);
-        //overridePendingTransition(R.anim.diagonal_out,R.anim.diagonal_in);
     }
 
 }

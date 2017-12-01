@@ -5,4 +5,7 @@
     <color name="colorAccent">#DCDDDF</color>
     <color name="colorBckgrnd">#5888C4</color>
     <color name="white">#FFFFFF</color>
+    <color name="purple">#B7A1C4</color>
+    <color name="olive">#b6c69b</color>
+    <color name="dgray">#a9aaa9</color>
 </resources>
