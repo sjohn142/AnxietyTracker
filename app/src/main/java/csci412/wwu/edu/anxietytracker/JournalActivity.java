@@ -62,18 +62,17 @@ public class JournalActivity extends AppCompatActivity {
     public void insert(View v) {
         EditText entryET = (EditText) findViewById(R.id.journalET);
         SeekBar moodSB = (SeekBar) findViewById(R.id.moodSeekBar);
-        String date = "thisisthedate";
-        String testDate = DateFormat.getDateTimeInstance().format(new Date());
+        //String date = "thisisthedate";
+        String date = DateFormat.getDateInstance().format(new Date());
         //Get date from device? Or input. Probs get date.
 
         String entry = entryET.getText().toString();
         int mood = moodSB.getProgress();
-        Toast.makeText(this, "date is " + testDate, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "date is " + date, Toast.LENGTH_SHORT).show();
 
         Journal tjournal = new Journal(0, date, entry, mood);
         Log.w("MainActivity", "journal = " + tjournal.toString());
         dbManager.insert(tjournal);
-        //clear info?
     }
 
     public void viewEntries(View v) {
