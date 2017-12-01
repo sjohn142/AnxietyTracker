@@ -1,6 +1,7 @@
 package csci412.wwu.edu.anxietytracker;
 
 import android.content.Intent;
+import android.icu.text.DateFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Toast;
+
+import java.util.Date;
 
 public class JournalActivity extends AppCompatActivity {
     private JournalDatabaseManager dbManager;
