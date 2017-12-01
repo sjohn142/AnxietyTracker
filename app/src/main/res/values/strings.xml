@@ -15,10 +15,67 @@
     <string name="explain_mood">Explain your mood. What are you thinking?</string>
     <string name="save">save</string>
     <string name="journalArchive">View previous entries</string>
+    <string name="support">Support</string>
+    <string name="belly">Belly Breathing</string>
+    <string name="tension">Tension Breathing</string>
+    <string name="mindful">Mindful Breathing</string>
 
     <string-array name="mood_array">
         <item>Bad.Sobad</item>
         <item>Boo</item>
         <item>Gross</item>
     </string-array>
+    <string name="title_activity_breathing_guide">BreathingGuide</string>
+    <string name="title_activity_support">support</string>
+    <string name="title_activity_bbreathing">BBreathing</string>
+    <string name="title_activity_mbreathing">MBreathing</string>
+    <string name="title_activity_tbreathing">TBreathing</string>
+
+    <string name="supportData">National Suicide Prevention Lifeline \n
+1-800-273-8255  \n \n
+
+National Alliance on Mental Illness (NAMI)  Helpline  \n
+1-800-950-6264 \n  \n
+
+Substance Abuse and Mental Health Services Administration Helpline  \n
+1-800-622-4357 \n \n
+
+Teen Line \n
+1-800-852-8336 \n \n
+
+HopeLine\n
+1-877-235-4525\n\n
+
+If you are experiencing a medical emergency, are in danger, or are feeling suicidal, call 911 immediately.</string>
+
+
+    <string name="bellyData">
+1. Place one hand on you stomach at your waist and the other over your sternum \n\n
+2. Sigh gently, letting your shoulders and upper body relax \n\n
+3. Close your mouth and wait a few seconds \n\n
+4. Slowly inhale through your nose, stopping when you have inhaled as much as you can comfortably \n\n
+5. Pause for a comfortable interval \n\n
+6. Exhale through your mouth by pulling your belly in \n\n
+7. Pause \n\n
+8. Repeat steps 4 – 7 \n\n
+\n
+		Source: anxietycoach.com</string>
+
+    <string name="mindfulData">
+1. Find a comfortable position seated in a chair or on the floor \n\n
+2. Notice and relax your body.  Notice its shape and weight, and become curious about the sensations around you and your connection with the chair or floor.  Try to relax any tension or tightness and breathe\n\n
+3. Pay attention to your breath, feel its flow in and out.  Notice how breathing effects your body, in your abdomen, chest, throat, and nostrils \n\n
+4. You may notice, as you do this, that your mind begins to wander. When this happens, notice you have wandered and say “wandering” or “thinking” in your head, softly, and redirect your attention to your breath\n\n
+5. Continue for 5 – 7 minutes.  Notice your breath, get lost in thoughts, and return to your breath\n\n
+6. After a while, notice your body and let yourself relax even more deeply.  Practice daily for best results!\n\n
+\n
+		Source: ggia.berkeley.edu</string>
+
+    <string name="tensionData">
+1. Slowly roll your neck.  Begin by lowering your chin towards your chest.  Roll your head to the right while slowly inhaling until your head is leaning back and your chin is pointing up\n\n
+2. Hold your breath for a few seconds in this position\n\n
+3. Roll your head down the way you came up, exhaling slowly until your chin is back at your chest\n\n
+4. Repeat on the left side, and continue, alternating sides, until your tension releases\n\n
+\n
+		Source: webmd.com</string>
 </resources>

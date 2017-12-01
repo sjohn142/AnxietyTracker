@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="30dp"
         android:layout_centerHorizontal="true"
-        android:text="Meditation Guide"
+        android:text="@string/button3"
         android:textSize="30dp"
         android:textColor="@color/colorAccent"
         />
@@ -31,21 +31,32 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="75dp"
-            android:text="Breathing Guide"
+            android:text="@string/support"
             android:textSize="20dp"
-            android:background="@color/colorAccent"/>
+            android:background="@color/purple"
+            android:onClick="viewSupport"/>
+
         <Button
             android:layout_width="300dp"
             android:layout_height="75dp"
-            android:text="Calming Music"
+            android:text="@string/belly"
             android:textSize="20dp"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorAccent"
+            android:onClick="viewBelly"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="75dp"
-            android:text="Support"
+            android:text="@string/mindful"
             android:textSize="20dp"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimary"
+            android:onClick="viewMindful"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:text="@string/tension"
+            android:textSize="20dp"
+            android:background="@color/olive"
+            android:onClick="viewTension"/>
 
     </LinearLayout>
 </RelativeLayout>
