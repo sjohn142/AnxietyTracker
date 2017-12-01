@@ -34,10 +34,12 @@ public class ViewJournalActivity extends AppCompatActivity {
         RelativeLayout layout = new RelativeLayout(this);
         ScrollView scrollView = new ScrollView(this);
         RadioGroup group = new RadioGroup(this);
+        ButtonHandler bh = new ButtonHandler();
         for (Journal entry : journalList) {
             Button rb = new Button(this);
             //rb.setWidth();
             rb.setId(entry.getId());
+            rb.setOnClickListener(bh);
             rb.setText("DATE: " + entry.getDate() + " MOOD: " + entry.getMoodLevel());
             group.addView(rb);
         }
@@ -55,8 +57,16 @@ public class ViewJournalActivity extends AppCompatActivity {
 
     private class RadioButtonHandler implements RadioGroup.OnCheckedChangeListener {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
-            //Toast.makeText(ViewJournalActivity.this, "Task deleted", Toast.LENGTH_SHORT).show();
             updateView();
+        }
+    }
+
+    private class ButtonHandler implements View.OnClickListener {
+        public void onClick(View v) {
+            int id = v.getId();
+            dbManager.deleteById(id);
+            updateView();
+            Toast.makeText(ViewJournalActivity.this, id + " removed successfully.", Toast.LENGTH_LONG).show();
         }
     }
 }
