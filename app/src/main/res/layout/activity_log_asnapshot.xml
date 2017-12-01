@@ -14,7 +14,7 @@
     tools:context="csci412.wwu.edu.anxietytracker.LogASnapshotActivity" />
 
 <Button
-    android:id="@+id/button1"
+    android:id="@+id/snapshotButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#b4929e"
@@ -23,10 +23,11 @@
     android:padding="8dp"
     android:layout_margin="5dp"
     android:text="@string/log"
-    android:textColor="#ffffff" />
+    android:textColor="#ffffff"
+    android:onClick="fillDatabase"/>
 
 <Button
-    android:id="@+id/button2"
+    android:id="@+id/locButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#b4929e"
@@ -38,7 +39,7 @@
     android:textColor="#ffffff" />
 
 <EditText
-    android:id="@+id/simpleEditText"
+    android:id="@+id/moodET"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:text="@string/mood"
@@ -47,9 +48,19 @@
     android:visibility="visible"
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true" />
+    
+    <Spinner
+        android:id="@+id/moodSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/mood_array"
+        android:layout_below="@+id/moodET"
+        android:background="@color/colorBckgrnd"
+        android:prompt="@string/mood"/>
+
 
 <EditText
-    android:id="@+id/simpleEditText2"
+    android:id="@+id/timeET"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:text="@string/time"
