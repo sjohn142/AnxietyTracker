@@ -15,4 +15,10 @@
     <string name="explain_mood">Explain your mood. What are you thinking?</string>
     <string name="save">save</string>
     <string name="journalArchive">View previous entries</string>
+
+    <string-array name="mood_array">
+        <item>Bad.Sobad</item>
+        <item>Boo</item>
+        <item>Gross</item>
+    </string-array>
 </resources>

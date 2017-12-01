@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -35,6 +37,7 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        dbManager = new SnapshotDatabaseManager(this);
     }
 
     @Override
@@ -70,6 +73,17 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void fillDatabase(View v){
+        //ugh
+        Spinner moodSelect = (Spinner) findViewById(R.id.moodSpinner);
+        String mood = String.valueOf(moodSelect.getSelectedItem());
+        double lat = 0;
+        double longi = 0;
+        int moodNum = 1;
+        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum);
+        dbManager.insert(curSnapshot);
     }
 
     /**
