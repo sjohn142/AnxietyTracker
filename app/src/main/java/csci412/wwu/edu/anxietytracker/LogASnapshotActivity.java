@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,6 +25,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class LogASnapshotActivity extends AppCompatActivity implements OnMapReadyCallback {
     private SnapshotDatabaseManager dbManager;
@@ -76,13 +80,25 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
     }
 
     public void fillDatabase(View v){
-        //ugh
-        Spinner moodSelect = (Spinner) findViewById(R.id.moodSpinner);
-        String mood = String.valueOf(moodSelect.getSelectedItem());
-        double lat = 0;
-        double longi = 0;
-        int moodNum = 1;
-        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum);
+        SeekBar moodSB = (SeekBar) findViewById(R.id.snapshotMood);
+        LocationManager locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        boolean network_enabled = locManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        Location location;
+        double longi = 0.0;
+        double lat = 0.0;
+        /*if (network_enabled) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return; //Idon'tknowwhythisishere-N
+            }
+            location = locManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            if(location!=null){
+                longi = location.getLongitude();
+                lat = location.getLatitude();
+            }
+        } */
+        int moodNum = moodSB.getProgress();
+        String date = DateFormat.getDateInstance().format(new Date());
+        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum,date);
         dbManager.insert(curSnapshot);
     }
 
