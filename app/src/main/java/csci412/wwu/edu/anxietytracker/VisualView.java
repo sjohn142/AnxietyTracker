@@ -39,28 +39,30 @@ public class VisualView extends View {
 
     public void drawGraph(Canvas canvas, int x) {
         int start = x;
-        canvas.drawText("100", x-20, 100+this.height/3-500, paint);
-        canvas.drawLine(x + 100, 100+this.height/3-500, this.width-60, 100+this.height/3-500, paint);
-        canvas.drawText("90", x, 100+this.height/3-400, paint);
-        canvas.drawLine(x + 100, 100+this.height/3-400, this.width-60, 100+this.height/3-400, paint);
-        canvas.drawText("80", x, 100+this.height/3-300, paint);
-        canvas.drawLine(x + 100, 100+this.height/3-300, this.width-60, 100+this.height/3-300, paint);
-        canvas.drawText("70", x, 100+this.height/3-200, paint);
-        canvas.drawLine(x + 100, 100+this.height/3-200, this.width-60, 100+this.height/3-200, paint);
-        canvas.drawText("60", x, 100+this.height/3-100, paint);
-        canvas.drawLine(x + 100, 100+this.height/3-100, this.width-60, 100+this.height/3-100, paint);
-        canvas.drawText("50", x, 100+this.height/3, paint);
-        canvas.drawLine(x + 100, 100+this.height/3, this.width-60, 100+this.height/3, paint);
-        canvas.drawText("40", x, 100+this.height/3+100, paint);
-        canvas.drawLine(x + 100, 100+this.height/3+100, this.width-60, 100+this.height/3+100, paint);
-        canvas.drawText("30", x, 100+this.height/3+200, paint);
-        canvas.drawLine(x + 100, 100+this.height/3+200, this.width-60, 100+this.height/3+200, paint);
-        canvas.drawText("20", x, 100+this.height/3+300, paint);
-        canvas.drawLine(x + 100, 100+this.height/3+300, this.width-60, 100+this.height/3+300, paint);
-        canvas.drawText("10", x, 100+this.height/3+400, paint);
-        canvas.drawLine(x + 100, 100+this.height/3+400, this.width-60, 100+this.height/3+400, paint);
-        canvas.drawText("0", x+20, 100+this.height/3+500, paint);
-        canvas.drawLine(x + 100, 100+this.height/3+500, this.width-60, 100+this.height/3+500, paint);
+        canvas.drawText("100", 20, 100+this.height/3-500, paint);
+        canvas.drawLine(160, 100+this.height/3-500, this.width-60, 100+this.height/3-500, paint);
+        canvas.drawText("90", 60, 100+this.height/3-400, paint);
+        canvas.drawLine(160, 100+this.height/3-400, this.width-60, 100+this.height/3-400, paint);
+        canvas.drawText("80", 60, 100+this.height/3-300, paint);
+        canvas.drawLine(160, 100+this.height/3-300, this.width-60, 100+this.height/3-300, paint);
+        canvas.drawText("70", 60, 100+this.height/3-200, paint);
+        canvas.drawLine(160, 100+this.height/3-200, this.width-60, 100+this.height/3-200, paint);
+        canvas.drawText("60", 60, 100+this.height/3-100, paint);
+        canvas.drawLine(160, 100+this.height/3-100, this.width-60, 100+this.height/3-100, paint);
+        canvas.drawText("50", 60, 100+this.height/3, paint);
+        canvas.drawLine(160, 100+this.height/3, this.width-60, 100+this.height/3, paint);
+        canvas.drawText("40", 60, 100+this.height/3+100, paint);
+        canvas.drawLine(160, 100+this.height/3+100, this.width-60, 100+this.height/3+100, paint);
+        canvas.drawText("30", 60, 100+this.height/3+200, paint);
+        canvas.drawLine(160, 100+this.height/3+200, this.width-60, 100+this.height/3+200, paint);
+        canvas.drawText("20", 60, 100+this.height/3+300, paint);
+        canvas.drawLine(160, 100+this.height/3+300, this.width-60, 100+this.height/3+300, paint);
+        canvas.drawText("10", 60, 100+this.height/3+400, paint);
+        canvas.drawLine(160, 100+this.height/3+400, this.width-60, 100+this.height/3+400, paint);
+        canvas.drawText("0", 80, 100+this.height/3+500, paint);
+        canvas.drawLine(160, 100+this.height/3+500, this.width-60, 100+this.height/3+500, paint);
+        canvas.drawText("JOURNAL DATA", this.width/5, this.height - 400, paint);
+        canvas.drawLine((this.width/5)+475, this.height-420, (this.width)/5+625, this.height-420, linePaint);
     }
 
     public void drawJournals(Canvas canvas, int spacing, ArrayList<Journal> journalList) {
