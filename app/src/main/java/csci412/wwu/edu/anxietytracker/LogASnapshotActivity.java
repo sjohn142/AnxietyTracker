@@ -98,8 +98,10 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
         } */
         int moodNum = moodSB.getProgress();
         String date = DateFormat.getDateInstance().format(new Date());
-        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum,date);
+        //Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum,date);
+        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum);
         dbManager.insert(curSnapshot);
+        Toast.makeText(this, "Mood " + moodNum, Toast.LENGTH_SHORT).show();
     }
 
     /**
