@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:paddingBottom="50dp"
         android:paddingTop="50dp"
-        android:text="@string/explain_mood"/>
+        android:hint="@string/explain_mood"/>
 
     <Button
         android:layout_width="wrap_content"
