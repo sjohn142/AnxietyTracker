@@ -67,7 +67,7 @@ public class JournalActivity extends AppCompatActivity {
 
         String entry = entryET.getText().toString();
         int mood = moodSB.getProgress();
-        Toast.makeText(this, "date is " + date, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Your journal has been saved", Toast.LENGTH_SHORT).show();
 
         Journal tjournal = new Journal(0, date, entry, mood);
         Log.w("MainActivity", "journal = " + tjournal.toString());
