@@ -101,7 +101,7 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
         //Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum,date);
         Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum);
         dbManager.insert(curSnapshot);
-        Toast.makeText(this, "Mood " + moodNum, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Your Snapshot has been saved", Toast.LENGTH_SHORT).show();
     }
 
     /**

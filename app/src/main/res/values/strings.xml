@@ -11,7 +11,7 @@
     <string name="mood">Enter a Mood</string>
     <string name="time">Enter a Time</string>
     <string name="journal_intro">How are you feeling?</string>
-    <string name="rate_mood">Rate your mood on a scale from 1-10</string>
+    <string name="rate_mood">Rate your mood on a scale from 1-100.\n100 is great and 1 is very bad.</string>
     <string name="explain_mood">Explain your mood. What are you thinking?</string>
     <string name="save">save</string>
     <string name="journalArchive">View previous entries</string>
