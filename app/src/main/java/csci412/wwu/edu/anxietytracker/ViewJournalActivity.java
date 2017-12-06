@@ -40,7 +40,7 @@ public class ViewJournalActivity extends AppCompatActivity {
             //rb.setWidth();
             rb.setId(entry.getId());
             rb.setOnClickListener(bh);
-            rb.setText("DATE: " + entry.getDate() + " MOOD: " + entry.getMoodLevel());
+            rb.setText("Your mood was " +entry.getMoodLevel() + ".\n" +entry.getJournalEntry() );
             group.addView(rb);
         }
 
