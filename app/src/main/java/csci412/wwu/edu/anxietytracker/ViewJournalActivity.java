@@ -35,6 +35,9 @@ public class ViewJournalActivity extends AppCompatActivity {
         ScrollView scrollView = new ScrollView(this);
         RadioGroup group = new RadioGroup(this);
         ButtonHandler bh = new ButtonHandler();
+
+
+
         for (Journal entry : journalList) {
             Button rb = new Button(this);
             //rb.setWidth();

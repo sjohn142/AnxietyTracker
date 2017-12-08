@@ -12,20 +12,20 @@ public class Snapshot {
     private int id;
     private int mood;
 
-    /*public Snapshot(int id, double lat, double longi,int mood, String date) {
+    public Snapshot(int id, double lat, double longi,int mood, String date) {
         setId(id);
         setLat(lat);
         setLong(longi);
         setMood(mood);
         setDate(date);
-    }*/
+    }
 
-    public Snapshot(int id, double lat, double longi,int mood) {
+    /*public Snapshot(int id, double lat, double longi,int mood) {
         setId(id);
         setLat(lat);
         setLong(longi);
         setMood(mood);
-    }
+    }*/
 
     public void setId(int newId) { id = newId; }
 
