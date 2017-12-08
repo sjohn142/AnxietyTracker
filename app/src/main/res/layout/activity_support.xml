@@ -28,6 +28,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:textSize="18dp"
+        android:autoLink = "phone"
         android:text="@string/supportData"
         android:layout_below="@+id/titleMedGuide"
         android:layout_alignParentLeft="true"
