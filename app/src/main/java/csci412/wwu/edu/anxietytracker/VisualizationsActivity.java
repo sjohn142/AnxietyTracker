@@ -8,6 +8,11 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class  VisualizationsActivity extends AppCompatActivity {
     private VisualView view;
@@ -15,6 +20,9 @@ public class  VisualizationsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        RelativeLayout layout = new RelativeLayout(this);
+
+        RelativeLayout drawL = new RelativeLayout(this);
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         Resources res = getResources();
@@ -25,8 +33,59 @@ public class  VisualizationsActivity extends AppCompatActivity {
         }
         int height = displaymetrics.heightPixels - statusBarHeight;
         int width = displaymetrics.widthPixels;
+
+        LinearLayout.LayoutParams linearParams = new LinearLayout.LayoutParams(
+                new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT));
+        linearParams.setMargins(0, 0, 0, height/16);
+        layout.setLayoutParams(linearParams);
+        layout.requestLayout();
+
+        RelativeLayout.LayoutParams a = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        a.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        drawL.setLayoutParams(a);
         view = new VisualView(this, width, height);
-        setContentView(view);
+        drawL.addView(view);
+
+        RelativeLayout buttonL = new RelativeLayout(this);
+        RadioGroup group = new RadioGroup(this);
+        RadioButton rb1 = new RadioButton(this);
+        rb1.setId(1);
+        rb1.setText("JOURNAL LOG");
+        rb1.setChecked(true);
+        RadioButton rb2 = new RadioButton(this);
+        rb2.setId(2);
+        rb2.setText("SNAPSHOT LOG");
+        group.addView(rb1);
+        group.addView(rb2);
+        group.setOrientation(LinearLayout.HORIZONTAL);
+        RadioButtonHandler rbh = new RadioButtonHandler();
+        group.setOnCheckedChangeListener(rbh);
+
+        RelativeLayout.LayoutParams b = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        b.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        b.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        buttonL.setLayoutParams(b);
+        buttonL.addView(group);
+
+        layout.addView(drawL);
+        layout.addView(buttonL);
+        setContentView(layout);
+    }
+
+    private class RadioButtonHandler implements RadioGroup.OnCheckedChangeListener {
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId == 1) {
+                view.selectJ();
+                view.invalidate();
+            } else {
+                view.deselectJ();
+                view.invalidate();
+            }
+        }
     }
 
     @Override
