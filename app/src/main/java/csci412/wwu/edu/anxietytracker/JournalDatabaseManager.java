@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class JournalDatabaseManager extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "journalDB";
+    private static final String DATABASE_NAME = "journalDB2";
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_JOURNAL = "journal";
     private static final String ID = "id";

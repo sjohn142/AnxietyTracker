@@ -14,7 +14,7 @@
     <string name="rate_mood">Rate your mood on a scale from 1-100.\n100 is great and 1 is very bad.</string>
     <string name="explain_mood">Explain your mood. What are you thinking?</string>
     <string name="save">save</string>
-    <string name="journalArchive">View previous entries</string>
+    <string name="journalArchive">View and delete previous entries</string>
     <string name="support">Support</string>
     <string name="belly">Belly Breathing</string>
     <string name="tension">Tension Breathing</string>

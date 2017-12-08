@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 
 public class SnapshotDatabaseManager extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "snapshotDB";
+    private static final String DATABASE_NAME = "snapshotDB2";
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_SNAPSHOT = "snapshot";
     private static final String ID = "id";
@@ -31,8 +31,8 @@ public class SnapshotDatabaseManager extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sqlCreate = "create table " + TABLE_SNAPSHOT + "( " + ID;
         sqlCreate += " integer primary key autoincrement, " + LAT + " real, ";
-        sqlCreate += LONGI + " real, " + MOOD + " integer )";
-        //sqlCreate += LONGI + " real, " + MOOD + " integer, " + DATE + " text )";//changed mood to text instead of integer ??? Has ramifications
+        //sqlCreate += LONGI + " real, " + MOOD + " integer )";
+        sqlCreate += LONGI + " real, " + MOOD + " integer, " + DATE + " text )";//changed mood to text instead of integer ??? Has ramifications
         Log.w("MainActivity", "SOMETHINGBSY"+sqlCreate);
         db.execSQL(sqlCreate);
     }
@@ -47,8 +47,8 @@ public class SnapshotDatabaseManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String sqlInsert = "insert into " + TABLE_SNAPSHOT;
         sqlInsert += " values( null, '" + snapshot.getLat() + "', '" + snapshot.getLongi();
-        sqlInsert += "', '" + snapshot.getMood() + "' )";
-        //sqlInsert += "', '" + snapshot.getMood() + "', '" + snapshot.getDate() + "' )";
+        //sqlInsert += "', '" + snapshot.getMood() + "' )";
+        sqlInsert += "', '" + snapshot.getMood() + "', '" + snapshot.getDate() + "' )";
         db.execSQL(sqlInsert);
         Log.w("MainActivity", "SOMETHINGBSY"+snapshot.toString());
         db.close();
@@ -70,7 +70,7 @@ public class SnapshotDatabaseManager extends SQLiteOpenHelper {
 
         while(cursor.moveToNext()) {
             Snapshot curSS = new Snapshot(cursor.getInt(0), cursor.getFloat(1),
-                cursor.getFloat(2), cursor.getInt(3));
+                cursor.getFloat(2), cursor.getInt(3), cursor.getString(4));
             snapshots.add(curSS);
         }
         db.close();
@@ -90,7 +90,7 @@ public class SnapshotDatabaseManager extends SQLiteOpenHelper {
         }*/
         if (cursor.moveToFirst()) {
             ss = new Snapshot(cursor.getInt(0), cursor.getFloat(1),
-                    cursor.getFloat(2), cursor.getInt(3));
+                    cursor.getFloat(2), cursor.getInt(3), cursor.getString(4));
         }
         db.close();
         return ss;

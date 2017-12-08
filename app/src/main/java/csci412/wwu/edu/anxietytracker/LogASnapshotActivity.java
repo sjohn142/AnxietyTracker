@@ -86,7 +86,7 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
         Location location;
         double longi = 0.0;
         double lat = 0.0;
-        /*if (network_enabled) {
+        if (network_enabled) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return; //Idon'tknowwhythisishere-N
             }
@@ -95,11 +95,11 @@ public class LogASnapshotActivity extends AppCompatActivity implements OnMapRead
                 longi = location.getLongitude();
                 lat = location.getLatitude();
             }
-        } */
+        } 
         int moodNum = moodSB.getProgress();
         String date = DateFormat.getDateInstance().format(new Date());
-        //Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum,date);
-        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum);
+        Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum,date);
+        //Snapshot curSnapshot = new Snapshot(0,lat,longi,moodNum);
         dbManager.insert(curSnapshot);
         Toast.makeText(this, "Your Snapshot has been saved", Toast.LENGTH_SHORT).show();
     }
